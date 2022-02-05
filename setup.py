@@ -55,7 +55,7 @@ class my_build_ext(build_ext):
         self.check_requirements()
         build_ext.build_extensions(self)
 
-    def test_build(self, contents, link=True, execute=False, libraries=None,
+    def test_build(self, contents, link=False, execute=False, libraries=None,
                    include_dirs=None, library_dirs=None):
         name = os.path.join(self.build_temp, 'conftest-%s.c' % self.conftestidx)
         self.conftestidx += 1
